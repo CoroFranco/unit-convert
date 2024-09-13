@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+
+
+
+.staticBotLine {
+    position: relative;   
+}
+
+.staticBotLine::after {
+    display: block;
+    position: absolute;
+    content: "";
+    background-color: #F59E0B;
+    height: 1.5px;
+    width: 100%;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+.botLine {
+    position: relative;
+}
+
+.botLine::after {
+    display: block;
+    position: absolute;
+    content: "";
+    background-color: #F59E0B;
+    height: 1.5px;
+    width: 0;
+    transform: translateX(-50%);
+    left: 50%;
+
+}
+
+.botLine:hover::after{
+    animation: botLine 1s ease;
+}
+
+@keyframes botLine {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
