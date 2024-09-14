@@ -14,44 +14,37 @@
         <h1 class="text-[2rem] text-amber-500">Unit Converter</h1>
         <nav>
             <ul class="flex space-x-9 [&>li>a:hover]:text-amber-500">
-                <li> <a class="text-amber-500 staticBotLine" href="#">Length</a></li>
-                <li> <a class="botLine" href="/weigth.html">Weigth</a></li>
-                <li> <a class="botLine" href="./temperature.html">Temperature</a></li>
+                <li> <a class="botLine" href="/">Length</a></li>
+                <li> <a class="text-amber-500 staticBotLine" href="#">Weigth</a></li>
+                <li> <a class="botLine" href="temperature.html">Temperature</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="border-[1px] border-black mt-10 max-w-[400px] m-auto p-10 rounded-sm">
         <form id="convertForm" class="flex flex-wrap flex-col gap-6 place-items-center" method="post" action="/submit">
-
-            <input type="hidden" name="conversionType" value="length">
+            <input type="hidden" name="conversionType" value="weigth">
             <div class="flex flex-col gap-5">
-                <label for="length">Enter the length to convert</label>
+                <label for="weigth">Enter the weigth to convert</label>
                 <input
                     class="mb-5 pl-2 py-1 text-center border-[1px] border-amber-500 focus:outline-amber-500 focus:outline-[2px]"
                     type="number" step="0.00001" name="value" id="length">
             </div>
             <select name="fromUnit">
                 <option class="text-gray-400" value="" disabled selected>>> Select unit to convert from <<</option>
-                <option value="Milímetro">Milímetro</option>
-                <option value="Centímetro">Centímetro</option>
-                <option value="Metro">Metro</option>
-                <option value="Kilómetro">Kilómetro</option>
-                <option value="Pulgada">Pulgada</option>
-                <option value="Pie">Pie</option>
-                <option value="Yarda">Yarda</option>
-                <option value="Milla">Milla</option>
+                <option value="Miligramo">Miligramo</option>
+                <option value="Gramo">Gramo</option>
+                <option value="Kilogramo">Kilogramo</option>
+                <option value="Onza">Onza</option>
+                <option value="Libra">Libra</option>
             </select>
             <select name="toUnit">
                 <option class="text-gray-400" value="" disabled selected>>> Select unit to convert to <<</option>
-                <option value="Milímetro">Milímetro</option>
-                <option value="Centímetro">Centímetro</option>
-                <option value="Metro">Metro</option>
-                <option value="Kilómetro">Kilómetro</option>
-                <option value="Pulgada">Pulgada</option>
-                <option value="Pie">Pie</option>
-                <option value="Yarda">Yarda</option>
-                <option value="Milla">Milla</option>
+                <option value="Miligramo">Miligramo</option>
+                <option value="Gramo">Gramo</option>
+                <option value="Kilogramo">Kilogramo</option>
+                <option value="Onza">Onza</option>
+                <option value="Libra">Libra</option>
             </select>
             <button type="submit"
                 class="px-4 py-2 bg-amber-500 cursor-pointer hover:bg-amber-600 font-bold flex place-items-center">Convert</button>

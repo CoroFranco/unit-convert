@@ -45,7 +45,7 @@ body {
 }
 
 .botLine:hover::after{
-    animation: botLine 1s ease;
+    animation: botLine 0.5s ease;
 }
 
 @keyframes botLine {
